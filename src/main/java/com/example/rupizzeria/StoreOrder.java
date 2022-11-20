@@ -12,10 +12,11 @@ public class StoreOrder implements Customizable {
         myStoreOrder = new ArrayList<>();
         orderNumber = 1;
     }
-/*
-    public int getOrderNumber() {
+
+/*    public int getOrderNumber() {
         return orderNumber;
     }
+
 
     public void setOrderNumber(int newNumber) {
         this.orderNumber = newNumber;
@@ -31,7 +32,11 @@ public class StoreOrder implements Customizable {
     }
 
     public boolean remove(Object obj) {
-        //TODO
+        if (obj instanceof Order) {
+            Order newOrder = (Order) obj;
+            if (myStoreOrder.remove(newOrder))
+                return true;
+        }
         return false;
     }
 

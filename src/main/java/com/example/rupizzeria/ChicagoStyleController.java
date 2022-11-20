@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -23,6 +25,8 @@ public class ChicagoStyleController implements Initializable {
     private ComboBox flavorComboBox = new ComboBox();
     @FXML
     private Button addButton, removeButton, addToOrderButton;
+    @FXML
+    private ImageView pizzaImage;
     private String[] flavor = {"DELUXE", "MEATZZA", "BBQ CHICKEN", "BUILD YOUR OWN"};
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -41,6 +45,9 @@ public class ChicagoStyleController implements Initializable {
 
         updatePrice();
         updateCrust();
+
+        Image image = new Image(getClass().getResourceAsStream("/images/deluxe_chicago_pizza.png"));
+        pizzaImage.setImage(image);
     }
 
     private PizzaFactory pizzaFactory;
@@ -64,17 +71,25 @@ public class ChicagoStyleController implements Initializable {
         removeButton.setDisable(true);
         if (flavor.equals("DELUXE")) {
             myPizza = pizzaFactory.createDeluxe();
+            pizzaImage.setImage(new Image(getClass().
+                    getResourceAsStream("/images/deluxe_chicago_pizza.png")));
         }
         if (flavor.equals("MEATZZA")) {
             myPizza = pizzaFactory.createMeatzza();
+            pizzaImage.setImage(new Image(getClass().
+                    getResourceAsStream("/images/chicago_meatzza.png")));
         }
         if (flavor.equals("BBQ CHICKEN")) {
             myPizza = pizzaFactory.createBBQChicken();
+            pizzaImage.setImage(new Image(getClass().
+                    getResourceAsStream("/images/chicago_bbq.png")));
         }
         if (flavor.equals("BUILD YOUR OWN")) {
             myPizza = pizzaFactory.createBuildYourOwn();
             addButton.setDisable(false);
             removeButton.setDisable(false);
+            pizzaImage.setImage(new Image(getClass().
+                    getResourceAsStream("/images/chicago_style_with_toppings.png")));
         }
 
         addedToppingsList.getItems().clear();

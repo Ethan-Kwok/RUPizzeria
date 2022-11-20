@@ -15,9 +15,9 @@ import java.io.IOException;
 
 public class MainController {
     @FXML
-    private Button chicagoButton, currentOrderButton;
+    private Button chicagoButton, nyButton, storeOrderButton, currentOrderButton;
     @FXML
-    private ImageView chicagoStyleImage;
+    private ImageView chicagoStyleImage, nyStyleImage;
 
     private static StoreOrder myStoreOrder;
 
@@ -53,9 +53,13 @@ public class MainController {
         Parent MainPage = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Chicago Style Pizza");
-        stage.setScene(new Scene(MainPage, 900, 600));
+        stage.setScene(new Scene(MainPage, 600, 432));
         stage.show();
     }
+
+    public void onNewYorkButtonClick(ActionEvent event) throws IOException {}
+
+    public void onStoreOrderButtonClick(ActionEvent event) throws IOException {}
 
     public void onCurrentOrderButtonClick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("CurrentOrderView.fxml"));
