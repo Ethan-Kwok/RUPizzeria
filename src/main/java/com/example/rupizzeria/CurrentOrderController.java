@@ -1,5 +1,6 @@
 package com.example.rupizzeria;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -9,16 +10,21 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 public class CurrentOrderController implements Initializable {
 
     @FXML
-    private ListView<Pizza> pizzaList;
+    private ListView<String> pizzaList;
     @FXML
-    private Button finishOrderButton;
+    private Button finishOrderButton, removeOrderButton, clearOrderButton;
+    @FXML
+    private Label orderLabel;
 
     private Order myOrder;
+
+    private static final DecimalFormat df = new DecimalFormat("0.00");
 
     private static final Crust[] ChicagoStyleCrusts = {Crust.valueOf("DEEP_DISH"), Crust.valueOf("PAN"),
             Crust.valueOf("STUFFED")};
@@ -28,7 +34,7 @@ public class CurrentOrderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (myOrder != null) {
             for (Pizza p : myOrder.getOrder()) {
-                pizzaList.getItems().add(p); //MAKE THIS STRING BY IMPLEMENTING TOSTRING METHOD
+                pizzaList.getItems().add(toString(p));
             }
         }
     }
@@ -37,25 +43,50 @@ public class CurrentOrderController implements Initializable {
         myOrder = MainController.getMyOrder();
     }
 
-    @Override
     public String toString(Pizza pizza) {
         String output = "";
         if (pizza instanceof Deluxe) output += "DELUXE";
         if (pizza instanceof BBQChicken) output += "BBQ CHICKEN";
         if (pizza instanceof Meatzza) output += "MEATZZA";
         if (pizza instanceof BuildYourOwn) output += "BUILD YOUR OWN";
-        if (ChicagoStyleCrusts.contains)
-
-        String output = flavor.toString() + " (CHICAGO STYLE - " + myPizza.getCrust() + "), ";
-        for (Toppings t : myPizza.getToppingsArrayList()) {
+        if (isChicagoStyle(pizza.getCrust())) output += " (CHICAGO STYLE - ";
+        else output += "NEW YORK STYLE - ";
+        output += pizza.getCrust() + "), ";
+        for (Toppings t : pizza.getToppingsArrayList()) {
             output += t.toString() + ", ";
         }
-        output += df.format(myPizza.price());
+        output += pizza.getSize() + ": $" + df.format(pizza.price());
         return output;
     }
 
-    private boolean containsValue(Crust crust) {
-        for (Crust c : )
+    private boolean isChicagoStyle(Crust crust) {
+        for (Crust c : ChicagoStyleCrusts) {
+            if (c.equals(crust)) return true;
+        }
+        return false;
+    }
+
+    public boolean removeOrder(ActionEvent event) {
+        try {
+            int selectedIndex = pizzaList.getSelectionModel().getSelectedIndex();
+            if (myOrder.remove(myOrder.getOrder().get(selectedIndex))) pizzaList.getItems().remove(
+                    pizzaList.getSelectionModel().getSelectedIndex());
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean clearOrder(ActionEvent event) {
+        try {
+            for (Pizza p : myOrder.getOrder()) {
+                myOrder.remove(p);
+                pizzaList.getItems().clear();
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public void finishOrder() {

@@ -36,10 +36,6 @@ public class MainController {
         myOrder.add(pizza);
     }
 
-    public static void addStringToOrder(String string) {
-        myOrder.addString(string);
-    }
-
     public static void resetMyOrder() {
         myOrder = new Order();
     }

@@ -109,13 +109,18 @@ public class ChicagoStyleController implements Initializable {
         updatePrice();
     }
 
-    public void removeTopping(ActionEvent event) {
-        Toppings selectedTopping = addedToppingsList.getSelectionModel().getSelectedItem();
-        if (myPizza.remove(selectedTopping)) addedToppingsList.getItems().remove(selectedTopping);
-        if (myPizza.getToppingsArrayList().size() < MAX_TOPPINGS) {
-            addButton.setDisable(false);
+    public boolean removeTopping(ActionEvent event) {
+        try {
+            Toppings selectedTopping = addedToppingsList.getSelectionModel().getSelectedItem();
+            if (myPizza.remove(selectedTopping)) addedToppingsList.getItems().remove(selectedTopping);
+            if (myPizza.getToppingsArrayList().size() < MAX_TOPPINGS) {
+                addButton.setDisable(false);
+            }
+            updatePrice();
+            return true;
+        } catch (Exception e) {
+            return false;
         }
-        updatePrice();
     }
 
     public void addToOrder(ActionEvent event) {

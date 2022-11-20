@@ -26,10 +26,6 @@ public class MainApplication extends Application {
 /*
 
 To do:
-- images under chicagostyle and nystyle
-- remove from current order
-- clear order in current order
-- tostring for current order
 - subtotal and sales tax calculation under current order
 - track unique order number (serial number) of orders and display under current order
 
