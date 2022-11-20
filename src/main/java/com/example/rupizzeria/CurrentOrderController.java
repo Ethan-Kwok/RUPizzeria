@@ -38,7 +38,7 @@ public class CurrentOrderController implements Initializable {
                 pizzaList.getItems().add(toString(p));
             }
             orderLabel.setText(Integer.toString(myOrder.getOrderNumber()));
-            System.out.println("order number: " + myOrder.getOrderNumber());
+            //System.out.println("order number: " + myOrder.getOrderNumber());
 
             subtotalLabel.setText(df.format(subtotalPrice()));
             taxLabel.setText(df.format(taxPrice()));

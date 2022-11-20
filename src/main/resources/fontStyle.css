@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Menlo';
+    src: url('font/Menlo-Regular.ttf');
+}
+
+.label {
+    -fx-font-family: "Menlo";
+    -fx-font-size: 68;
+}
+
+.button .text {
+    -fx-font-family: "Menlo";
+    -fx-font-size: 19;
+}
+
+

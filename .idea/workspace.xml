@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="Price code in currentOrder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/fontStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/font/Menlo-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/StoreOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/StoreOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/fontStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fontStyle.css" afterDir="false" />
     </list>
     <list id="87ae269b-12d7-4def-9bf6-53e39083278b" name="Changes by Etjam_ " comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +54,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Etjam\IdeaProjects\RUPizzeria\src\main\resources" />
+      <recent name="C:\Users\Etjam\IdeaProjects\RUPizzeria\src\main\resources\css" />
       <recent name="$PROJECT_DIR$/src/main/resources/font" />
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
-      <recent name="C:\Users\Etjam\IdeaProjects\RUPizzeria\src\main\resources" />
       <recent name="C:\Users\Etjam\IdeaProjects\RUPizzeria\src\main\java\com\example\rupizzeria\images" />
-      <recent name="C:\Users\Etjam\IdeaProjects\RUPizzeria\src\main\java\com\example\rupizzeria" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.rupizzeria" />
