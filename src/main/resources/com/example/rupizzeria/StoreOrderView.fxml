@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.rupizzeria.StoreOrderController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizzeria.StoreOrderController">
+   <children>
+      <VBox layoutX="29.0" layoutY="20.0" prefHeight="200.0" prefWidth="129.0">
+         <children>
+            <Label text="Order Number" />
+            <ComboBox fx:id="orderComboBox" onAction="#displayOrder" prefHeight="30.0" prefWidth="124.0" promptText="1" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" layoutX="205.0" layoutY="47.0" prefHeight="32.0" prefWidth="361.0" spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order total (tax included): $">
+               <font>
+                  <Font name="Menlo Regular" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="orderTotalLabel" prefHeight="20.0" prefWidth="124.0" text="0.00">
+               <font>
+                  <Font name="Menlo Regular" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ListView fx:id="orderList" layoutX="94.0" layoutY="100.0" prefHeight="200.0" prefWidth="413.0" />
+      <Button fx:id="cancelOrderButton" layoutX="66.0" layoutY="318.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2;" stylesheets="@../../../style.css" text="Cancel Order">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="exportButton" layoutX="287.0" layoutY="318.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2;" stylesheets="@../../../style.css" text="Export">
+         <font>
+            <Font name="Menlo Regular" size="17.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

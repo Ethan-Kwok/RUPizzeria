@@ -38,12 +38,9 @@ public class CurrentOrderController implements Initializable {
                 pizzaList.getItems().add(toString(p));
             }
             orderLabel.setText(Integer.toString(myOrder.getOrderNumber()));
-            //System.out.println("order number: " + myOrder.getOrderNumber());
-
-            subtotalLabel.setText(df.format(subtotalPrice()));
-            taxLabel.setText(df.format(taxPrice()));
-            totalLabel.setText(df.format(totalPrice()));
-
+            subtotalLabel.setText(df.format(subtotalPrice(myOrder)));
+            taxLabel.setText(df.format(taxPrice(myOrder)));
+            totalLabel.setText(df.format(totalPrice(myOrder)));
         }
     }
 
@@ -51,7 +48,7 @@ public class CurrentOrderController implements Initializable {
         myOrder = MainController.getMyOrder();
     }
 
-    public String toString(Pizza pizza) {
+    public static String toString(Pizza pizza) {
         String output = "";
         if (pizza instanceof Deluxe) output += "DELUXE";
         if (pizza instanceof BBQChicken) output += "BBQ CHICKEN";
@@ -67,7 +64,7 @@ public class CurrentOrderController implements Initializable {
         return output;
     }
 
-    private boolean isChicagoStyle(Crust crust) {
+    private static boolean isChicagoStyle(Crust crust) {
         for (Crust c : ChicagoStyleCrusts) {
             if (c.equals(crust)) return true;
         }
@@ -80,9 +77,9 @@ public class CurrentOrderController implements Initializable {
             if (myOrder.remove(myOrder.getOrder().get(selectedIndex))) pizzaList.getItems().remove(
                     pizzaList.getSelectionModel().getSelectedIndex());
 
-            subtotalLabel.setText(df.format(subtotalPrice()));
-            taxLabel.setText(df.format(taxPrice()));
-            totalLabel.setText(df.format(totalPrice()));
+            subtotalLabel.setText(df.format(subtotalPrice(myOrder)));
+            taxLabel.setText(df.format(taxPrice(myOrder)));
+            totalLabel.setText(df.format(totalPrice(myOrder)));
 
             return true;
         } catch (Exception e) {
@@ -95,9 +92,9 @@ public class CurrentOrderController implements Initializable {
             myOrder.getOrder().clear();
             pizzaList.getItems().clear();
 
-            subtotalLabel.setText(df.format(subtotalPrice()));
-            taxLabel.setText(df.format(taxPrice()));
-            totalLabel.setText(df.format(totalPrice()));
+            subtotalLabel.setText(df.format(subtotalPrice(myOrder)));
+            taxLabel.setText(df.format(taxPrice(myOrder)));
+            totalLabel.setText(df.format(totalPrice(myOrder)));
 
             return true;
         } catch (Exception e) {
@@ -105,7 +102,7 @@ public class CurrentOrderController implements Initializable {
         }
     }
 
-    public double subtotalPrice() {
+    public static double subtotalPrice(Order myOrder) {
         double price = 0;
         try {
             for (Pizza p : myOrder.getOrder()) {
@@ -117,14 +114,14 @@ public class CurrentOrderController implements Initializable {
         }
     }
 
-    public double taxPrice() {
-        double price = subtotalPrice();
+    public static double taxPrice(Order myOrder) {
+        double price = subtotalPrice(myOrder);
         price *= TAX_RATE;
         return price;
     }
 
-    public double totalPrice() {
-        return subtotalPrice() + taxPrice();
+    public static double totalPrice(Order myOrder) {
+        return subtotalPrice(myOrder) + taxPrice(myOrder);
     }
 
     public void finishOrder() {

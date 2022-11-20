@@ -34,6 +34,10 @@ public class MainController {
         return myOrder;
     }
 
+    public static StoreOrder getMyStoreOrder() {
+        return myStoreOrder;
+    }
+
     public static void addToOrder(Pizza pizza) {
         myOrder.add(pizza);
     }
@@ -43,6 +47,10 @@ public class MainController {
         while (orderNumberArrayList.contains(i)) i++;
         orderNumberArrayList.add(i);
         return i;
+    }
+
+    public static int getNumOrders() {
+        return orderNumberArrayList.size();
     }
 
     public static void resetMyOrder() {
@@ -64,7 +72,14 @@ public class MainController {
 
     public void onNewYorkButtonClick(ActionEvent event) throws IOException {}
 
-    public void onStoreOrderButtonClick(ActionEvent event) throws IOException {}
+    public void onStoreOrderButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("StoreOrderView.fxml"));
+        Parent MainPage = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Store Order");
+        stage.setScene(new Scene(MainPage, 900, 600));
+        stage.show();
+    }
 
     public void onCurrentOrderButtonClick(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("CurrentOrderView.fxml"));

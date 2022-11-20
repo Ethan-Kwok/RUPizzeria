@@ -7,10 +7,15 @@
     <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="Fixed fonts">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/CurrentOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/CurrentOrderView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/StoreOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/StoreOrderView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <list id="87ae269b-12d7-4def-9bf6-53e39083278b" name="Changes by Etjam_ " comment="" />
