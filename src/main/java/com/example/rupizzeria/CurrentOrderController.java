@@ -20,7 +20,7 @@ public class CurrentOrderController implements Initializable {
     @FXML
     private Button finishOrderButton, removeOrderButton, clearOrderButton;
     @FXML
-    private Label orderLabel;
+    private Label orderLabel, subtotalLabel, taxLabel, totalLabel;
 
     private Order myOrder;
 

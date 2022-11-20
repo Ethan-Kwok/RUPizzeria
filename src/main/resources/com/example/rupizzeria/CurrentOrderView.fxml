@@ -48,7 +48,37 @@
                </font>
             </Text>
             <Pane prefHeight="32.0" prefWidth="9.0" />
-            <Label fx:id="orderLabel1" text="1">
+            <Label fx:id="subtotalLabel" text="1">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="244.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: wheat; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Tax:">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Text>
+            <Pane prefHeight="32.0" prefWidth="9.0" />
+            <Label fx:id="taxLabel" text="1">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="440.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: wheat; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Total:">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Text>
+            <Pane prefHeight="32.0" prefWidth="9.0" />
+            <Label fx:id="totalLabel" text="1">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
