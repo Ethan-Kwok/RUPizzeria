@@ -37,10 +37,14 @@ public class CurrentOrderController implements Initializable {
             for (Pizza p : myOrder.getOrder()) {
                 pizzaList.getItems().add(toString(p));
             }
+            orderLabel.setText(Integer.toString(myOrder.getOrderNumber()));
+            System.out.println("order number: " + myOrder.getOrderNumber());
+
+            subtotalLabel.setText(df.format(subtotalPrice()));
+            taxLabel.setText(df.format(taxPrice()));
+            totalLabel.setText(df.format(totalPrice()));
+
         }
-        subtotalLabel.setText(df.format(subtotalPrice()));
-        taxLabel.setText(df.format(taxPrice()));
-        totalLabel.setText(df.format(totalPrice()));
     }
 
     public CurrentOrderController() {
@@ -124,7 +128,7 @@ public class CurrentOrderController implements Initializable {
     }
 
     public void finishOrder() {
-        if (myOrder.getSize() <= 0) {
+        if (myOrder.getOrder().size() == 0) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Cannot place an empty order");
             alert.setTitle("ERROR");

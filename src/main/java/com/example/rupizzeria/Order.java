@@ -7,9 +7,11 @@ import java.util.ResourceBundle;
 public class Order implements Customizable {
 
     private ArrayList<Pizza> myOrder;
+    private int orderNumber;
 
     public Order() {
         myOrder = new ArrayList<>();
+        orderNumber = MainController.orderNumber();
     }
 
     public boolean add(Object obj) {
@@ -33,8 +35,8 @@ public class Order implements Customizable {
         return this.myOrder;
     }
 
-    public int getSize() {
-        return myOrder.size();
+    public int getOrderNumber() {
+        return orderNumber;
     }
 
 }

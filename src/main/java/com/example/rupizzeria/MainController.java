@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainController {
     @FXML
@@ -20,10 +21,11 @@ public class MainController {
     private ImageView chicagoStyleImage, nyStyleImage;
 
     private static StoreOrder myStoreOrder;
-
     private static Order myOrder;
+    private static ArrayList<Integer> orderNumberArrayList;
 
     public MainController() {
+        orderNumberArrayList = new ArrayList<>();
         myStoreOrder = new StoreOrder();
         myOrder = new Order();
     }
@@ -34,6 +36,13 @@ public class MainController {
 
     public static void addToOrder(Pizza pizza) {
         myOrder.add(pizza);
+    }
+
+    public static int orderNumber() {
+        int i = 1;
+        while (orderNumberArrayList.contains(i)) i++;
+        orderNumberArrayList.add(i);
+        return i;
     }
 
     public static void resetMyOrder() {
