@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="659.0" style="-fx-background-color: oldlace;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizzeria.CurrentOrderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="661.0" style="-fx-background-color: oldlace;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizzeria.CurrentOrderController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="49.0" layoutY="49.0" prefHeight="47.0" prefWidth="562.0" spacing="2.0" style="-fx-background-color: peachpuff; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
          <children>
@@ -27,9 +27,9 @@
          </children>
       </HBox>
       <ListView fx:id="pizzaList" layoutX="49.0" layoutY="125.0" prefHeight="244.0" prefWidth="562.0" style="-fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" />
-      <Button fx:id="finishOrderButton" layoutX="226.0" layoutY="465.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="108.0" prefWidth="385.0" text="Place Order">
+      <Button fx:id="finishOrderButton" layoutX="226.0" layoutY="465.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="99.0" prefWidth="385.0" style="-fx-background-color: burlywood; -fx-background-radius: 20;" stylesheets="@../../../css/style.css" text="Place Order" textFill="#724f37">
          <font>
-            <Font name="Menlo Regular" size="20.0" />
+            <Font name="Menlo Regular" size="30.0" />
          </font></Button>
       <Button fx:id="clearOrderButton" layoutX="49.0" layoutY="519.0" mnemonicParsing="false" onAction="#clearOrder" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2;" stylesheets="@../../../css/style.css" text="Clear Order">
          <font>
@@ -40,45 +40,42 @@
             <Font name="Menlo Regular" size="17.0" />
          </font>
       </Button>
-      <HBox alignment="CENTER_LEFT" layoutX="49.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: wheat; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
+      <HBox alignment="CENTER_LEFT" layoutX="49.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: navajowhite; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2;">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Subtotal:">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Subtotal: $">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
             </Text>
-            <Pane prefHeight="32.0" prefWidth="9.0" />
-            <Label fx:id="subtotalLabel" text="1">
+            <Label fx:id="subtotalLabel" text="0.00">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="244.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: wheat; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
+      <HBox alignment="CENTER_LEFT" layoutX="244.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: navajowhite; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2;">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Tax:">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Tax: $">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
             </Text>
-            <Pane prefHeight="32.0" prefWidth="9.0" />
-            <Label fx:id="taxLabel" text="1">
+            <Label fx:id="taxLabel" text="0.00">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="440.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: wheat; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
+      <HBox alignment="CENTER_LEFT" layoutX="440.0" layoutY="395.0" prefHeight="47.0" prefWidth="171.0" spacing="2.0" style="-fx-background-color: navajowhite; -fx-background-radius: 10; -fx-border-color: tan; -fx-border-radius: 10; -fx-border-width: 2;">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Total:">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Total: $">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
             </Text>
-            <Pane prefHeight="32.0" prefWidth="9.0" />
-            <Label fx:id="totalLabel" text="1">
+            <Label fx:id="totalLabel" text="0.00">
                <font>
                   <Font name="Menlo Regular" size="15.0" />
                </font>
