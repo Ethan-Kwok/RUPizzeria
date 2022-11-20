@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ButtonEffect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/chicago_bbq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/chicago_meatzza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/chicago_style_with_toppings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/deluxe_chicago_pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/deluxe_ny_pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ny_bbq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ny_meatzza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ny_pizza_with_toppings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ny_style_pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/shopping_cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/store_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ChicagoStyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ChicagoStyleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/StoreOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="UI stuff" />
     <list id="87ae269b-12d7-4def-9bf6-53e39083278b" name="Changes by Etjam_ " comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ChicagoStyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ChicagoStyleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" afterDir="false" />
@@ -49,44 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="6" end1="6" start2="7" end2="8" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="10" end1="10" start2="12" end2="13" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="15" end1="16" start2="18" end2="19" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="17" end1="18" start2="20" end2="23" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="21" end1="21" start2="26" end2="28" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="29" end1="30" start2="36" end2="37" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="38" end1="39" start2="45" end2="45" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="45" end1="49" start2="51" end2="55" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="51" end1="52" start2="57" end2="58" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="55" end1="57" start2="61" end2="89" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainController.java">
-      <ranges>
-        <range start1="17" end1="18" start2="17" end2="18" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="19" end1="20" start2="19" end2="20" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="38" end1="42" start2="38" end2="38" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-        <range start1="55" end1="56" start2="51" end2="52" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="59" end1="59" start2="55" end2="59" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/ChicagoStyleController.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="8" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="25" end1="25" start2="27" end2="29" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="43" end1="43" start2="47" end2="50" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="66" end1="66" start2="73" end2="75" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="69" end1="69" start2="78" end2="80" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="72" end1="72" start2="83" end2="85" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="77" end1="77" start2="90" end2="92" changelist="b450dcc3-da50-4276-a56d-95faa191f5c4" />
-        <range start1="96" end1="103" start2="111" end2="123" changelist="87ae269b-12d7-4def-9bf6-53e39083278b" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -153,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668490861741</updated>
     </task>
+    <task id="LOCAL-00001" summary="UI stuff">
+      <created>1668915122457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668915122457</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +117,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="UI stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
