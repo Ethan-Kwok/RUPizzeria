@@ -25,6 +25,7 @@ public class CurrentOrderController implements Initializable {
     private Order myOrder;
 
     private static final DecimalFormat df = new DecimalFormat("0.00");
+    private static final double TAX_RATE = 0.06625;
 
     private static final Crust[] ChicagoStyleCrusts = {Crust.valueOf("DEEP_DISH"), Crust.valueOf("PAN"),
             Crust.valueOf("STUFFED")};
@@ -37,6 +38,9 @@ public class CurrentOrderController implements Initializable {
                 pizzaList.getItems().add(toString(p));
             }
         }
+        subtotalLabel.setText(df.format(subtotalPrice()));
+        taxLabel.setText(df.format(taxPrice()));
+        totalLabel.setText(df.format(totalPrice()));
     }
 
     public CurrentOrderController() {
@@ -71,6 +75,11 @@ public class CurrentOrderController implements Initializable {
             int selectedIndex = pizzaList.getSelectionModel().getSelectedIndex();
             if (myOrder.remove(myOrder.getOrder().get(selectedIndex))) pizzaList.getItems().remove(
                     pizzaList.getSelectionModel().getSelectedIndex());
+
+            subtotalLabel.setText(df.format(subtotalPrice()));
+            taxLabel.setText(df.format(taxPrice()));
+            totalLabel.setText(df.format(totalPrice()));
+
             return true;
         } catch (Exception e) {
             return false;
@@ -79,14 +88,39 @@ public class CurrentOrderController implements Initializable {
 
     public boolean clearOrder(ActionEvent event) {
         try {
-            for (Pizza p : myOrder.getOrder()) {
-                myOrder.remove(p);
-                pizzaList.getItems().clear();
-            }
+            myOrder.getOrder().clear();
+            pizzaList.getItems().clear();
+
+            subtotalLabel.setText(df.format(subtotalPrice()));
+            taxLabel.setText(df.format(taxPrice()));
+            totalLabel.setText(df.format(totalPrice()));
+
             return true;
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public double subtotalPrice() {
+        double price = 0;
+        try {
+            for (Pizza p : myOrder.getOrder()) {
+                price += p.price();
+            }
+            return price;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public double taxPrice() {
+        double price = subtotalPrice();
+        price *= TAX_RATE;
+        return price;
+    }
+
+    public double totalPrice() {
+        return subtotalPrice() + taxPrice();
     }
 
     public void finishOrder() {
