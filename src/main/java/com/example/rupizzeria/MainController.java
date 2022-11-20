@@ -62,7 +62,7 @@ public class MainController {
         Parent MainPage = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Current Order");
-        stage.setScene(new Scene(MainPage, 900, 600));
+        stage.setScene(new Scene(MainPage, 661, 600));
         stage.show();
     }
 
