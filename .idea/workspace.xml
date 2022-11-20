@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="Price code in currentOrder">
+    <list default="true" id="b450dcc3-da50-4276-a56d-95faa191f5c4" name="Changes" comment="Fixed fonts">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/CurrentOrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/rupizzeria/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/ChicagoStyleView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/CurrentOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/CurrentOrderView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/rupizzeria/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/fontStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fontStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <list id="87ae269b-12d7-4def-9bf6-53e39083278b" name="Changes by Etjam_ " comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668918202461</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed fonts">
+      <created>1668925213574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668925213574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +142,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="UI stuff" />
     <MESSAGE value="Price code in currentOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Price code in currentOrder" />
+    <MESSAGE value="Fixed fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

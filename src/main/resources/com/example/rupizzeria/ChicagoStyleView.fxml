@@ -52,11 +52,11 @@
       </HBox>
       <ListView fx:id="allToppingsList" layoutX="59.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: tan; -fx-border-width: 2;" />
       <ListView fx:id="addedToppingsList" layoutX="343.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: tan; -fx-border-width: 2;" />
-      <Button fx:id="addButton" layoutX="278.0" layoutY="224.0" mnemonicParsing="false" onAction="#addTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../css/style.css" text="Add">
+      <Button fx:id="addButton" layoutX="278.0" layoutY="224.0" mnemonicParsing="false" onAction="#addTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Add">
          <font>
             <Font name="Menlo Regular" size="13.0" />
          </font></Button>
-      <Button fx:id="removeButton" layoutX="266.0" layoutY="271.0" mnemonicParsing="false" onAction="#removeTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-width: 2; -fx-border-radius: 10;" stylesheets="@../../../css/style.css" text="Remove">
+      <Button fx:id="removeButton" layoutX="266.0" layoutY="271.0" mnemonicParsing="false" onAction="#removeTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-width: 2; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Remove">
          <font>
             <Font name="Menlo Regular" size="13.0" />
          </font></Button>
@@ -76,7 +76,7 @@
          </children>
       </HBox>
       <ComboBox fx:id="flavorComboBox" layoutX="57.0" layoutY="40.0" onAction="#getFlavor" prefWidth="150.0" promptText="FLAVOR" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" />
-      <Button fx:id="addToOrderButton" layoutX="428.0" layoutY="384.0" mnemonicParsing="false" onAction="#addToOrder" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../css/style.css" text="Add To Order">
+      <Button fx:id="addToOrderButton" layoutX="407.0" layoutY="384.0" mnemonicParsing="false" onAction="#addToOrder" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Add To Order">
          <font>
             <Font name="Menlo Regular" size="13.0" />
          </font></Button>
