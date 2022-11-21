@@ -25,7 +25,6 @@ public class StoreOrderController implements Initializable {
     private ComboBox orderComboBox = new ComboBox();
 
     private StoreOrder myStoreOrder;
-    private String[] orderNumberList;
     private static final DecimalFormat df = new DecimalFormat("0.00");
     private static final int STARTING_ORDER_NUMBER = 1;
 
@@ -60,6 +59,7 @@ public class StoreOrderController implements Initializable {
 
     public void displayOrder(ActionEvent event) {
         if(orderComboBox.getValue() == null) {
+            orderList.getItems().clear();
             return;
         }
 
