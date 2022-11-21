@@ -1,5 +1,10 @@
 package com.example.rupizzeria;
 
+/**
+ * Interface class for implementing the abstract factory design pattern.
+ *
+ * @author David Ma, Ethan Kwok
+ */
 public interface PizzaFactory {
     Pizza createDeluxe();
     Pizza createMeatzza();

@@ -1,5 +1,10 @@
 package com.example.rupizzeria;
 
+/**
+ * Toppings enum class holds the list of all toppings.
+ *
+ * @author David Ma, Ethan Kwok
+ */
 public enum Toppings {
     SAUSAGE,
     PEPPERONI,
