@@ -55,7 +55,7 @@ public class CurrentOrderController implements Initializable {
         if (pizza instanceof Meatzza) output += "MEATZZA";
         if (pizza instanceof BuildYourOwn) output += "BUILD YOUR OWN";
         if (isChicagoStyle(pizza.getCrust())) output += " (CHICAGO STYLE - ";
-        else output += "NEW YORK STYLE - ";
+        else output += " (NEW YORK STYLE - ";
         output += pizza.getCrust() + "), ";
         for (Toppings t : pizza.getToppingsArrayList()) {
             output += t.toString() + ", ";
@@ -74,8 +74,9 @@ public class CurrentOrderController implements Initializable {
     public boolean removeOrder(ActionEvent event) {
         try {
             int selectedIndex = pizzaList.getSelectionModel().getSelectedIndex();
-            if (myOrder.remove(myOrder.getOrder().get(selectedIndex))) pizzaList.getItems().remove(
-                    pizzaList.getSelectionModel().getSelectedIndex());
+            if (myOrder.remove(myOrder.getOrder().get(selectedIndex))) {
+                pizzaList.getItems().remove(pizzaList.getSelectionModel().getSelectedIndex());
+            }
 
             subtotalLabel.setText(df.format(subtotalPrice(myOrder)));
             taxLabel.setText(df.format(taxPrice(myOrder)));

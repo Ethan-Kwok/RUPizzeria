@@ -79,8 +79,8 @@ public class MainController {
      * orderNumberArrayList.
      * @return int representing the number of orders in the store order.
      */
-    public static int getNumOrders() {
-        return orderNumberArrayList.size();
+    public static ArrayList<Integer> getOrderNumArrayList() {
+        return orderNumberArrayList;
     }
 
     /**
@@ -115,7 +115,15 @@ public class MainController {
      * Loads and opens the NewYorkStyle pizza GUI.
      * @throws IOException
      */
-    public void onNewYorkButtonClick() throws IOException {}
+    public void onNewYorkButtonClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("NewYorkStyleView.fxml"));
+        Parent MainPage = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("New York Style Pizza");
+        stage.setScene(new Scene(MainPage, 600, 432));
+        stage.show();
+
+    }
 
     /**
      * Loads and opens the StoreOrder GUI that keeps track of all the total store orders.
@@ -126,7 +134,7 @@ public class MainController {
         Parent MainPage = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Store Order");
-        stage.setScene(new Scene(MainPage, 900, 600));
+        stage.setScene(new Scene(MainPage, 626, 454));
         stage.show();
     }
 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="432.0" prefWidth="600.0" style="-fx-background-color: oldlace;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rupizzeria.NewYorkStyleController">
+   <children>
+      <HBox layoutX="57.0" layoutY="97.0" prefHeight="32.0" prefWidth="284.0" spacing="15.0">
+         <children>
+            <RadioButton fx:id="smallRadioButton" mnemonicParsing="false" onMouseClicked="#updateSize" prefHeight="32.0" prefWidth="91.0" selected="true" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="size" />
+               </toggleGroup>
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mediumRadioButton" mnemonicParsing="false" onMouseClicked="#updateSize" prefHeight="34.0" prefWidth="95.0" text="Medium" toggleGroup="$size">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="largeRadioButton" mnemonicParsing="false" onMouseClicked="#updateSize" prefHeight="32.0" prefWidth="92.0" text="Large" toggleGroup="$size">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font></RadioButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="383.0" prefHeight="32.0" prefWidth="235.0" spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Price: $">
+               <font>
+                  <Font name="Menlo Regular" size="16.0" />
+               </font></Text>
+            <Label fx:id="priceLabel" prefHeight="20.0" prefWidth="85.0" text="0.00">
+               <font>
+                  <Font name="Menlo Regular" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ListView fx:id="allToppingsList" layoutX="59.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: tan; -fx-border-width: 2;" />
+      <ListView fx:id="addedToppingsList" layoutX="343.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: tan; -fx-border-width: 2;" />
+      <Button fx:id="addButton" layoutX="278.0" layoutY="224.0" mnemonicParsing="false" onAction="#addTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Add">
+         <font>
+            <Font name="Menlo Regular" size="13.0" />
+         </font></Button>
+      <Button fx:id="removeButton" layoutX="266.0" layoutY="271.0" mnemonicParsing="false" onAction="#removeTopping" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-background-radius: 10; -fx-border-width: 2; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Remove">
+         <font>
+            <Font name="Menlo Regular" size="13.0" />
+         </font></Button>
+      <HBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="132.0" prefHeight="32.0" prefWidth="200.0" spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crust:">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Text>
+            <Pane prefHeight="32.0" prefWidth="9.0" />
+            <Label fx:id="crustLabel" text="N/A">
+               <font>
+                  <Font name="Menlo Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ComboBox fx:id="flavorComboBox" layoutX="57.0" layoutY="40.0" onAction="#getFlavor" prefWidth="150.0" promptText="FLAVOR" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" />
+      <Button fx:id="addToOrderButton" layoutX="407.0" layoutY="384.0" mnemonicParsing="false" onAction="#addToOrder" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: peachpuff; -fx-border-color: tan; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../../../style.css" text="Add To Order">
+         <font>
+            <Font name="Menlo Regular" size="13.0" />
+         </font></Button>
+      <StackPane layoutX="361.0" layoutY="16.0" prefHeight="135.0" prefWidth="157.0" style="-fx-border-color: peachpuff; -fx-border-width: 5;">
+         <children>
+            <ImageView fx:id="pizzaImage" fitHeight="129.0" fitWidth="155.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/deluxe_ny_pizza.png" />
+               </image></ImageView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

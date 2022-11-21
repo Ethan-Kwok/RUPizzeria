@@ -39,7 +39,7 @@
                   <Image url="@../../../images/ny_style_pizza.png" />
                </image>
             </ImageView>
-            <Button fx:id="nyButton" mnemonicParsing="false" opacity="0.92" prefHeight="79.0" prefWidth="247.0" style="-fx-background-color: blanchedalmond; -fx-background-radius: 15;" text="New York Pizza" textAlignment="CENTER" textFill="#8d7033">
+            <Button fx:id="nyButton" mnemonicParsing="false" onAction="#onNewYorkButtonClick" opacity="0.92" prefHeight="79.0" prefWidth="247.0" style="-fx-background-color: blanchedalmond; -fx-background-radius: 15;" text="New York Pizza" textAlignment="CENTER" textFill="#8d7033">
                <font>
                   <Font name="Menlo Regular" size="19.0" />
                </font>
