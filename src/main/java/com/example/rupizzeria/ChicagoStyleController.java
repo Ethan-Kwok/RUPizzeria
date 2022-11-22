@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 /**
@@ -61,7 +62,8 @@ public class ChicagoStyleController implements Initializable {
         updatePrice();
         updateCrust();
 
-        Image image = new Image(getClass().getResourceAsStream("/images/deluxe_chicago_pizza.png"));
+        Image image = new Image(Objects.requireNonNull(getClass().
+                getResourceAsStream("/images/deluxe_chicago_pizza.png")));
         pizzaImage.setImage(image);
     }
 
@@ -91,25 +93,25 @@ public class ChicagoStyleController implements Initializable {
         removeButton.setDisable(true);
         if (flavor.equals("DELUXE")) {
             myPizza = pizzaFactory.createDeluxe();
-            pizzaImage.setImage(new Image(getClass().
-                    getResourceAsStream("/images/deluxe_chicago_pizza.png")));
+            pizzaImage.setImage(new Image(Objects.requireNonNull(getClass().
+                    getResourceAsStream("/images/deluxe_chicago_pizza.png"))));
         }
         if (flavor.equals("MEATZZA")) {
             myPizza = pizzaFactory.createMeatzza();
-            pizzaImage.setImage(new Image(getClass().
-                    getResourceAsStream("/images/chicago_meatzza.png")));
+            pizzaImage.setImage(new Image(Objects.requireNonNull(getClass().
+                    getResourceAsStream("/images/chicago_meatzza.png"))));
         }
         if (flavor.equals("BBQ CHICKEN")) {
             myPizza = pizzaFactory.createBBQChicken();
-            pizzaImage.setImage(new Image(getClass().
-                    getResourceAsStream("/images/chicago_bbq.png")));
+            pizzaImage.setImage(new Image(Objects.requireNonNull(getClass().
+                    getResourceAsStream("/images/chicago_bbq.png"))));
         }
         if (flavor.equals("BUILD YOUR OWN")) {
             myPizza = pizzaFactory.createBuildYourOwn();
             addButton.setDisable(false);
             removeButton.setDisable(false);
-            pizzaImage.setImage(new Image(getClass().
-                    getResourceAsStream("/images/chicago_style_with_toppings.png")));
+            pizzaImage.setImage(new Image(Objects.requireNonNull(getClass().
+                    getResourceAsStream("/images/chicago_style_with_toppings.png"))));
         }
 
         addedToppingsList.getItems().clear();
